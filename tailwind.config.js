@@ -36,8 +36,8 @@ module.exports = {
         jura: "'Jura', sans-serif",
       },
       backgroundImage: {
-        'blackAsteoIcon': "url('/public/design/icons/AsteoLogoBlack.png')",
-        'whiteAsteoIcon': "url('/public/design/icons/AsteoLogoWhite.png')",
+        'blackAsteoIcon': "url('/design/icons/AsteoLogoBlack.png')",
+        'whiteAsteoIcon': "url('/design/icons/AsteoLogoWhite.png')",
       }
     },
   },
