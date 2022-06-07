@@ -12,4 +12,5 @@
 
 <NavigatorBar title="Register"/>
 <RegisterForm/>
+<div class="p-4 mt-4"></div>
 <Footer/>

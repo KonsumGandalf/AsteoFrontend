@@ -1,6 +1,8 @@
 <script lang="ts">
   import { push } from "svelte-spa-router";
   import { getContext } from "svelte";
+  import LabelInput from "./LabledInput.svelte";
+  import ImageContent from "./ImageContent.svelte";
 
   let firstName = "";
   let lastName = "";
@@ -8,6 +10,8 @@
   let username = "";
   let password = "";
   let errorMessage = "";
+
+  const contentList = ["Be(Member) to join our Community.","Re(Member) what expresses you."];
 
   const donationService = getContext("DonationService");
 
@@ -21,16 +25,33 @@
   }
 </script>
 
-<form on:submit|preventDefault={register}>  
-    <div class="flex flex-col border border-y-2 border-stone-700 rounded-none items-center p-2">
-      <div  class="border-2 border-stone-700 ">
-        <label class="font-mono" for="username">username: </label>
-        <input bind:value={username} class="w-72 font-mono border-b border-stone-700 bg-transparent text-stone-700 mr-3 py-1 px-2 leading-tight focus:outline-none"  id="username" name="username" type="text">  
-      </div>
-      <label class="font-mono" for="password">password: </label>
-      <input bind:value={password} class="font-mono border-b border-stone-700 bg-transparent text-stone-700 mr-3 py-1 px-2 leading-tight focus:outline-none"  id="password" name="password" type="text">
-    </div>        
-</form>  
+<div class="mt-10 sm:mt-0">
+  <div class="md:grid md:grid-cols-3 md:gap-6">
+    <div class="ml-4 md:col-span-1">
+      <ImageContent heading="Personal Information" contentList={contentList} imgSource="/design/images/artworks/Waves.jpg" imgCaption={["Fig.1 - Unkown Artist - Waves, 1887."]} />
+      
+    </div>
+    <div class="md:mt-0 md:col-span-2">
+      <form on:submit|preventDefault={register}>  
+        <div class="shadow overflow-hidden sm:rounded-md">
+          <div class="px-4 py-5 bg-white sm:p-6">
+            <div class="grid grid-cols-6 gap-6">              
+              <LabelInput spanW={3} styledLabel="First Name" value="{firstName}" />
+              <LabelInput spanW={3} styledLabel="Last Name" value="{lastName}" />
+              <LabelInput spanW={4} styledLabel="Email" value="{email}" />
+              <LabelInput spanW={4} styledLabel="Username" value="{username}" />
+              <LabelInput spanW={4} styledLabel="Password" value="{password}" />             
+            </div>
+          </div>
+          <div class="px-4 py-5 bg-gray-50 text-right sm:px-6">
+            <a href="/#/login" class="text-pastelBlackEerie font-mono py-5 px-2 border-b-2 border-pastelMediumPurple hover:text-white hover:bg-pastelMediumPurple hover:border-stone-700 transition duration-300">Confirm</a>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
 {#if errorMessage}
   <div class="section">
     {errorMessage}

@@ -8,9 +8,9 @@
 </script>
 
 
-
+<div class="bg-white w-full h-16"></div>
 <section id="footer" class="bg-pastelBrightLilac">
-  <div class=" flex items-center justify-between p-2 py-24 py-12 flex-row space-y-0">
+  <div class="container flex items-center justify-between p-2 mx-24 flex-row space-y-0">
     <div class="container">
       <div class="text-5xl font-josefin leading-tight text-start text-white">[Share]</div>
       <div class="text-5xl font-josefin leading-tight text-start text-white">[Remember] the art you love.</div>
@@ -38,8 +38,8 @@
       </div>
     </div>          
     <div>
-      <a class="flex items-center py-4 pr-48" href="/#">
-          <img class="w-64 h-64" src="/design/images/icons/AsteoLogoWhite.png" alt="">
+      <a class="py-4 pr-12 lg:pr-48" href="/#">
+          <img class="" src="/design/images/icons/AsteoLogoWhite.png" alt="">
       </a>
     </div>
     
