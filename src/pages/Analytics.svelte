@@ -1,5 +1,6 @@
 <script>
   import NavigatorBar from "../components/NavigatorBar.svelte";
+  import Dashboard from "../components/Dashboard.svelte";
   import Footer from "../components/Footer.svelte";
   import {getContext} from "svelte";
 
@@ -9,4 +10,5 @@
 
 
 <NavigatorBar/>
+<Dashboard/>
 <Footer/>

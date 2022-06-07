@@ -9,11 +9,8 @@
   import Galleries from "./pages/Galleries.svelte";
   import Login from "./pages/Login.svelte";
   import Paintings from "./pages/Paintings.svelte";
-  import Profil from "./pages/Profil.svelte";
+  import Profile from "./pages/Profile.svelte";
   import Register from "./pages/Register.svelte";
-
-
-  import NavigatorBar from "./components/NavigatorBar.svelte";
 
   import Router from "svelte-spa-router";
 
@@ -28,7 +25,7 @@
     "/epochs": Epochs,
     "/galleries": Galleries,
     "/paintings": Paintings,
-    "/profil": Profil,
+    "/profile": Profile,
     "/analytics": Analytics,
     "/home": Home,
     "/logout": Home 
