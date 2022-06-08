@@ -1,8 +1,8 @@
 <script lang="ts">
   import { push } from "svelte-spa-router";
   import { getContext } from "svelte";
-  import LabelInput from "./LabledInput.svelte";
-  import ImageContent from "./ImageContent.svelte";
+  import LabelInput from "../subComponent/LabledInput.svelte";
+  import ImageContent from "../subComponent/ImageContent.svelte";
 
   let firstName = "";
   let lastName = "";
@@ -13,12 +13,12 @@
 
   const contentList = ["Be(Member) to join our Community.","Re(Member) what expresses you."];
 
-  const donationService = getContext("DonationService");
+  const asteoService= getContext("AsteoService");
 
   async function register() {
-    let success = await donationService.register(firstName, lastName, email, password)
+    let success = await asteoService.register(firstName, lastName, email, username, password)
     if (success) {
-      push("/");
+      push("/profile");
     } else {
       errorMessage = "Error Trying to sign up";
     }
@@ -36,11 +36,11 @@
         <div class="shadow overflow-hidden sm:rounded-md">
           <div class="px-4 py-5 bg-white sm:p-6">
             <div class="grid grid-cols-6 gap-6">              
-              <LabelInput spanW={3} styledLabel="First Name" value="{firstName}" />
-              <LabelInput spanW={3} styledLabel="Last Name" value="{lastName}" />
-              <LabelInput spanW={4} styledLabel="Email" value="{email}" />
-              <LabelInput spanW={4} styledLabel="Username" value="{username}" />
-              <LabelInput spanW={4} styledLabel="Password" value="{password}" />             
+              <LabelInput spanW={3} styledLabel="First Name" bind:value="{firstName}" />
+              <LabelInput spanW={3} styledLabel="Last Name" bind:value="{lastName}" />
+              <LabelInput spanW={4} styledLabel="Email" typeInput="email" bind:value="{email}" />
+              <LabelInput spanW={4} styledLabel="Username" bind:value="{username}" />
+              <LabelInput spanW={4} styledLabel="Password" typeInput="password" bind:value="{password}" />             
             </div>
           </div>
           <div class="px-4 py-5 bg-gray-50 text-right sm:px-6">

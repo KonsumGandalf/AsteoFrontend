@@ -1,12 +1,12 @@
 <script>
-  import NavigatorBar from "../components/NavigatorBar.svelte";
-  import Footer from "../components/Footer.svelte";
-  import LoginForm from "../components/LoginForm.svelte";
+    import {push} from "svelte-spa-router";
+  import NavigatorBar from "../components/pageComponent/NavigatorBar.svelte";
+  import Footer from "../components/pageComponent/Footer.svelte";
+  import LoginForm from "../components/pageComponent/LoginForm.svelte";
   import {getContext} from "svelte";
   const Waves = "/design/images/artworks/Waves.jpg";
 
-  // const donationService = getContext("DonationService");
-  // donationService.logout();
+
 </script>
 
 

@@ -13,8 +13,9 @@
   import Register from "./pages/Register.svelte";
 
   import Router from "svelte-spa-router";
+  import { AsteoService } from "./services/asteo-service";
 
-  // setContext("DonationService", new DonationService());
+  setContext("AsteoService", new AsteoService("http://localhost:4000"));
 
   let routes = {
     "/": Home,

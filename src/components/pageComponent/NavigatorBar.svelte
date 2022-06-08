@@ -15,10 +15,10 @@
 
   onMount(() => url = window.location.href);
 
-  const donationService = getContext("DonationService");
+  const asteoService= getContext("AsteoService");
 
   async function login() {
-    let success = await donationService.login(username, password)
+    let success = await asteoService.login(username, password)
     if (success) {
       push("/donate");
     } else {

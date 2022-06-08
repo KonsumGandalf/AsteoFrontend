@@ -1,8 +1,8 @@
 <script>
-  import NavigatorBar from "../components/NavigatorBar.svelte";
-  import ButtonRegisterLog from "../components/ButtonRegisterLog.svelte";
-  import HeadingContent from "../components/HeadingContent.svelte";
-  import Footer from "../components/Footer.svelte";
+  import NavigatorBar from "../components/pageComponent/NavigatorBar.svelte";
+  import ButtonRegisterLog from "../components/subComponent/ButtonRegisterLog.svelte";
+  import HeadingContent from "../components/subComponent/HeadingContent.svelte";
+  import Footer from "../components/pageComponent/Footer.svelte";
   import {getContext} from "svelte";
 
   const input = [
@@ -22,11 +22,11 @@
       content: "Strong imaginations have many benefits, including the ability to think outside the box and boost self-confidence. All the change-makers in society are imaginative. The arts encourage imaginative thinking, especially in kids whose brains are still developing.",
     },
   ]
-  // const donationService = getContext("DonationService");
+  // const asteoService= getContext("AsteoService");
   // donationService.logout();
 </script>
 
-<NavigatorBar title={"Asteo"}/>
+<NavigatorBar title="Asteo"/>
 <!-- Hero section -->
 <section id="hero" class="">
   <div class="container flex flex-row items-center px-2 mx-auto space-y-0">
