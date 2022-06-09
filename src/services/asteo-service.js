@@ -65,17 +65,46 @@ export class AsteoService {
 
   async getProfile(id){
     const res = await axios.get(`${this.baseUrl}/api/users/${id}`);
-    const test = {
-      firstName: res.data.firstName,
-      lastName: "Skywalker",
-      username: "FalseWalkewr",
-      email: "awd@ijn",
-      password: "secret",
-      rank: 0,
-      countPosting: 0
-      };
     return res.data;
   }
+
+  async getAllEpochs(){
+    try {
+      const response = await axios.get(`${this.baseUrl}/api/epochs`);
+      return response.data;
+    } catch (error) {
+      return [];
+    }
+  }
+
+  async getAllArtists(){
+    try {
+      const response = await axios.get(`${this.baseUrl}/api/artists`);
+      return response.data;
+    } catch (error) {
+      return [];
+    }
+  }
+
+  async getAllGalleries(){
+    try {
+      const response = await axios.get(`${this.baseUrl}/api/galleries`);
+      return response.data;
+    } catch (error) {
+      return [];
+    }
+  }
+
+  async getDetail(detailUrl){
+    try {
+      const response = await axios.get(`${this.baseUrl}/api/${detailUrl}`);
+      return response.data; // [1,23,4,`${this.baseUrl}/api/${detailUrl}` ];
+    } catch (error) {
+      return [];
+    }
+  }
+
+
 
   async donate(donation) {
     try {

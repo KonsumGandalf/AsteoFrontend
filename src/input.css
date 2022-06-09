@@ -7,6 +7,16 @@
 
 :global(body) { /* this will apply to <body> */ margin: 0; padding: 0; }
 
+.map-medium{
+  width: 800px;
+  height: 600px;
+}
+
+.map-large{
+  width: 800px;
+  height: 600px;
+}
+
 /* @layer base{
   .mystery-button {
     @apply outline outline-red-100 outline-dashed outline-offset-2 outline-4 rounded-r-lg bg-blue-500 w-20 h-16 border-8 border-t-blue-200 border-b-yellow-200 border-r-red-200 border-l-green-200 border-double;

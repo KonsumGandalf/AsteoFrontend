@@ -11,6 +11,9 @@
   import Paintings from "./pages/Paintings.svelte";
   import Profile from "./pages/Profile.svelte";
   import Register from "./pages/Register.svelte";
+  import ArtistsDetail from "./pages/DetailPages/ArtistsDetail.svelte";
+  import EpochsDetail from "./pages/DetailPages/EpochsDetail.svelte";
+  import GalleriesDetail from "./pages/DetailPages/GalleriesDetail.svelte";
 
   import Router from "svelte-spa-router";
   import { AsteoService } from "./services/asteo-service";
@@ -29,7 +32,10 @@
     "/profile": Profile,
     "/analytics": Analytics,
     "/home": Home,
-    "/logout": Home 
+    "/logout": Home,
+    "/artists/:id": ArtistsDetail,
+    "/epochs/:id": EpochsDetail,
+    "/galleries/:id": GalleriesDetail,
   }
 </script>
 
