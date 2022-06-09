@@ -1,9 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital@0;1&family=Josefin+Slab:wght@400&family=Jura:wght@500&family=Nova+Flat&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css");
+:global(body) { /* this will apply to <body> */ margin: 0; padding: 0; }
 
+.map-medium{
+  width: 800px;
+  height: 600px;
+}
+
+.map-large{
+  width: 800px;
+  height: 600px;
+}
 
 /* @layer base{
   .mystery-button {
