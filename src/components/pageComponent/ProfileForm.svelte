@@ -12,7 +12,7 @@
   const asteoService= getContext("AsteoService");
 
   onMount(async () => {
-    profil = await asteoService.getProfile(get(user)._id)
+    profil = await asteoService.getUser(get(user)._id)
   });
 </script>
 

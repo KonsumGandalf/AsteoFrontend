@@ -4,7 +4,7 @@
   import {LeafletMap} from '../../services/leaflet-map';
   import {getContext, onMount} from "svelte";
   
-  const asteoService= getContext("AsteoService");
+  const asteoService = getContext("AsteoService");
   export let gallery = {};
   export let mapStyle = "h-full w-full";
   export let idx = gallery._id || "";

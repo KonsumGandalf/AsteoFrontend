@@ -25,7 +25,7 @@
 
   onMount(async() => {
     detailEle = (await asteoService.getDetail((window.location.href).split("/#/")[1]));
-    addingUser = await asteoService.getProfile(detailEle.user);
+    addingUser = await asteoService.getUser(detailEle.user);
     title = `${detailEle.firstName} ${detailEle.lastName}`
     leftComp.value = detailEle.countPaintings;
     rightComp.value = addingUser.username;

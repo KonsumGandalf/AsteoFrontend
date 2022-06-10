@@ -14,6 +14,7 @@
   import ArtistsDetail from "./pages/DetailPages/ArtistsDetail.svelte";
   import EpochsDetail from "./pages/DetailPages/EpochsDetail.svelte";
   import GalleriesDetail from "./pages/DetailPages/GalleriesDetail.svelte";
+  import PaintingsDetail from "./pages/DetailPages/PaintingsDetail.svelte";
 
   import Router from "svelte-spa-router";
   import { AsteoService } from "./services/asteo-service";
@@ -36,6 +37,7 @@
     "/artists/:id": ArtistsDetail,
     "/epochs/:id": EpochsDetail,
     "/galleries/:id": GalleriesDetail,
+    "/paintings/:id": PaintingsDetail,
   }
 </script>
 

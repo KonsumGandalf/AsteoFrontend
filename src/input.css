@@ -7,9 +7,9 @@
 
 :global(body) { /* this will apply to <body> */ margin: 0; padding: 0; }
 
-.map-medium{
-  width: 800px;
-  height: 600px;
+.map-footer{
+  width: 1200px;
+  height: 230px;
 }
 
 .map-large{

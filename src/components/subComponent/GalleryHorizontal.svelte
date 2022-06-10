@@ -19,7 +19,7 @@
     <div class="mx-32 p-8">
         <div class="grid grid-cols-3 my-8">
           {#each input as image,idx}
-            <div class="mt-4 border-black border-l-2 pl-2 rounded-none">
+            <div class="border-l-2 border-pastelBlackOlive p-4 m-4 rounded-none">
               <a href={window.location.href}/{refList[idx]}>
                 {#if mode === "image"}
                   <ImageCaption imgSource={getImage()} imgCaption={image} classExtensionImg="w-72 h-72 "/> 

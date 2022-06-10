@@ -1,5 +1,4 @@
 <script>
-    import {push} from "svelte-spa-router";
   import NavigatorBar from "../components/pageComponent/NavigatorBar.svelte";
   import Footer from "../components/pageComponent/Footer.svelte";
   import LoginForm from "../components/pageComponent/LoginForm.svelte";

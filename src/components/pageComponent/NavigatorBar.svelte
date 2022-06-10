@@ -51,7 +51,7 @@
       <div class="flex justify-between">
         <div>
             <a class="flex items-center py-4 px-2" href="/#">
-                <img class="w-20 h-20" src="/design/images/icons/AsteoLogoBlack.png" alt="">
+                <img class="w-32 h-32" src="/design/images/icons/AsteoLogoBlack.png" alt="">
             </a>
         </div>
         <div class="flex space-x-1 items-center">
@@ -75,7 +75,7 @@
   <!-- Body of Picasso -->
   <div class="flex flex-auto justify-between px-20 py-16">
     <a href="/#/{newPage(-1)}" class="material-icons-outlined md-32 mr-2 hover:text-white transition duration-300">arrow_back_ios</a>
-    <div class="text-4xl font-josefin text-9xl tracking-widest uppercase mt-4">{title}</div>
+    <div class="text-4xl font-josefin lg:text-9xl tracking-widest uppercase mt-4">{title}</div>
     <a href="/#/{newPage(+1)}" class="material-icons-outlined md-32 mr-2 hover:text-white transition duration-300">arrow_forward_ios</a>
   </div>
 </div>
