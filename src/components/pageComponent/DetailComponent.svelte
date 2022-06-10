@@ -1,6 +1,6 @@
 <script>
   import SimpleLocationMap from "../subComponent/SimpleLocationMap.svelte";
-  export let title = "", leftComp = {}, rightComp = {}, bottomComp = [], gallery;
+  export let leftComp = {}, rightComp = {}, bottomComp = [], gallery = null;
 
   export let imageList = ["/design/images/artworks/Irises.jpg", "/design/images/artworks/Waves.jpg"]
   function getImage(){
@@ -9,7 +9,7 @@
 
 </script>
 
-<div class="container">
+<div class="container mt-32">
   <div class="flex  items-center justify-center space-x-8">
     <div class="w-2/12">
       <h3 class="mb-4 text-lg font-mono block">

@@ -63,9 +63,40 @@ export class AsteoService {
     }
   }
 
-  async getProfile(id){
-    const res = await axios.get(`${this.baseUrl}/api/users/${id}`);
+  async getUser(id){
+    try {
+      const res = await axios.get(`${this.baseUrl}/api/users/${id}`);
+      return res.data;
+    } catch (error) {
+      return [];
+    }
+  }
+
+  async getEpoch(id){
+    try {
+    const res = await axios.get(`${this.baseUrl}/api/epochs/${id}`);
     return res.data;
+    } catch (error) {
+      return [];
+    }
+  }
+
+  async getArtist(id){
+    try {
+    const res = await axios.get(`${this.baseUrl}/api/artists/${id}`);
+    return res.data;
+    } catch (error) {
+      return [];
+    }
+  }
+
+  async getGallery(id){
+    try {
+    const res = await axios.get(`${this.baseUrl}/api/galleries/${id}`);
+    return res.data;
+    } catch (error) {
+      return [];
+    }
   }
 
   async getAllEpochs(){
@@ -89,6 +120,15 @@ export class AsteoService {
   async getAllGalleries(){
     try {
       const response = await axios.get(`${this.baseUrl}/api/galleries`);
+      return response.data;
+    } catch (error) {
+      return [];
+    }
+  }
+
+  async getAllPaintings(){
+    try {
+      const response = await axios.get(`${this.baseUrl}/api/paintings`);
       return response.data;
     } catch (error) {
       return [];

@@ -10,7 +10,7 @@
 
 <div class="bg-white w-full h-16"></div>
 <section id="footer" class="bg-pastelBrightLilac">
-  <div class="container flex items-center justify-between p-2 ml-24 flex-row space-y-0">
+  <div class="flex items-center justify-between p-2 mx-48 flex-row space-y-0">
     <div class="container">
       <div class="text-5xl font-josefin leading-tight text-start text-white">[Share]</div>
       <div class="text-5xl font-josefin leading-tight text-start text-white">[Remember] the art you love.</div>
@@ -38,7 +38,7 @@
       </div>
     </div>          
     <div>
-      <a class="py-4 pr-12" href="/#">
+      <a class="p-12" href="/#">
           <img class="" src="/design/images/icons/AsteoLogoWhite.png" alt="">
       </a>
     </div>

@@ -22,7 +22,7 @@
 
   onMount(async() => {
     detailEle = (await asteoService.getDetail((window.location.href).split("/#/")[1]));
-    addingUser = await asteoService.getProfile(detailEle.user);
+    addingUser = await asteoService.getUser(detailEle.user);
     title = `${detailEle.name}`
     leftComp.value = detailEle.yearSpan;
     rightComp.value = addingUser.username;
@@ -31,5 +31,5 @@
 </script>
 
 <NavigatorBar bind:title={title}/>
-<DetailComponent bind:title={title} bind:leftComp={leftComp} bind:rightComp={rightComp} bind:bottomComp={bottomComp}/>
+<DetailComponent bind:leftComp={leftComp} bind:rightComp={rightComp} bind:bottomComp={bottomComp}/>
 <Footer/>
