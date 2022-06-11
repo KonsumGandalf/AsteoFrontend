@@ -5,7 +5,7 @@
   import {getContext} from "svelte";
   const Waves = "/design/images/artworks/Waves.jpg";
 
-  // const asteoService= getContext("AsteoService");
+  // const asteoService = getContext("AsteoService");
   // donationService.logout();
 </script>
 

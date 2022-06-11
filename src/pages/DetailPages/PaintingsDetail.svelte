@@ -7,9 +7,9 @@
   import SimpleLocationMap from "../../components/subComponent/SimpleLocationMap.svelte";
   import {getContext, onMount} from "svelte";
 
-  const asteoService= getContext("AsteoService");
+  const asteoService = getContext("AsteoService");
 
-  let detailEle = {}, addingUser = {}, furtherDescription, epoch, artist, gallery;
+  let detailEle = {}, addingUser = {}, furtherDescription, epoch, artist, gallery, image;
   let leftComp = {
     label: "Publication Year",
   }
@@ -27,7 +27,8 @@
   onMount(async() => {
     detailEle = (await asteoService.getDetail((window.location.href).split("/#/")[1]));
     addingUser = await asteoService.getUser(detailEle.user);
-    title = `${detailEle.title}`
+    title = `${detailEle.title}`;    
+    image = detailEle.image;
     leftComp.value = detailEle.year;
     rightComp.value = addingUser.username;
     bottomComp[0].value = detailEle.price;
@@ -69,7 +70,7 @@
 </script>
 
 <NavigatorBar bind:title={title}/>
-<DetailComponent bind:leftComp={leftComp} bind:rightComp={rightComp} bind:bottomComp={bottomComp}/>
+<DetailComponent bind:image={image} bind:leftComp={leftComp} bind:rightComp={rightComp} bind:bottomComp={bottomComp}/>
 {#if furtherDescription}  
   <DescriptionComponent content={furtherDescription}/>
   <MapFooter bind:gallery={gallery}/>

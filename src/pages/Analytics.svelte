@@ -4,7 +4,7 @@
   import Footer from "../components/pageComponent/Footer.svelte";
   import {getContext} from "svelte";
 
-  // const asteoService= getContext("AsteoService");
+  // const asteoService = getContext("AsteoService");
   // donationService.logout();
 </script>
 

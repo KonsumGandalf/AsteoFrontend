@@ -9,7 +9,7 @@
   let profil;
   const contentList = ["Be(Member) to join our Community.","Re(Member) what expresses you."];
 
-  const asteoService= getContext("AsteoService");
+  const asteoService = getContext("AsteoService");
 
   onMount(async () => {
     profil = await asteoService.getUser(get(user)._id)

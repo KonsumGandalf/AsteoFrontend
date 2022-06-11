@@ -3,12 +3,12 @@
 //  import {DonationService} from "./services/donation-service";
   import Home from "./pages/Home.svelte";
   import Analytics from "./pages/Analytics.svelte";
-  import Artists from "./pages/Artists.svelte";
+  import Artists from "./pages/GalleryPages/Artists.svelte";
   import Discovery from "./pages/Discovery.svelte";
-  import Epochs from "./pages/Epochs.svelte";
-  import Galleries from "./pages/Galleries.svelte";
+  import Epochs from "./pages/GalleryPages/Epochs.svelte";
+  import Galleries from "./pages/GalleryPages/Galleries.svelte";
   import Login from "./pages/Login.svelte";
-  import Paintings from "./pages/Paintings.svelte";
+  import Paintings from "./pages/GalleryPages/Paintings.svelte";
   import Profile from "./pages/Profile.svelte";
   import Register from "./pages/Register.svelte";
   import ArtistsDetail from "./pages/DetailPages/ArtistsDetail.svelte";

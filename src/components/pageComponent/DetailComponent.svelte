@@ -1,50 +1,53 @@
 <script>
+  import DeleteButton from "../subComponent/DeleteButton.svelte";
   import SimpleLocationMap from "../subComponent/SimpleLocationMap.svelte";
-  export let leftComp = {}, rightComp = {}, bottomComp = [], gallery = null;
-
-  export let imageList = ["/design/images/artworks/Irises.jpg", "/design/images/artworks/Waves.jpg"]
-  function getImage(){
-      return imageList[Math.floor(Math.random()*imageList.length)];
-  }
+  export let image, leftComp = {}, rightComp = {}, bottomComp = [], gallery = null;
 
 </script>
 
-<div class="container mt-32">
-  <div class="flex  items-center justify-center space-x-8">
-    <div class="w-2/12">
-      <h3 class="mb-4 text-lg font-mono block">
-        {leftComp.label}
-      </h3>
-      <p class="text-darkGrayishBlue font-jura text-xl">
-        {leftComp.value}
-      </p>
+<div class="mx-auto w-9/12">
+  <div class="justify-self-center">
+    <div class="flex items-center justify-center space-x-8">
+      <div class="w-2/12">
+        <h3 class="mb-4 text-lg font-mono block">
+          {leftComp.label}
+        </h3>
+        <p class="text-darkGrayishBlue font-jura text-xl">
+          {leftComp.value}
+        </p>
+      </div>
+      <!-- unlogical code !!! 14 of 12 rel width is assigned -->
+      <div class="w-10/12 h-10/12 border-x-2 border-pastelBlackOlive rounded-none px-24">
+        <!-- <div>123</div> -->
+        {#if gallery}
+          <SimpleLocationMap gallery={gallery} mapStyle="map-medium"/> 
+        {:else}
+          <img src={image} class="mx-auto shadow-xl" alt="">
+        {/if}
+      </div>
+      <div class="flex items-center w-2/12">
+        <div>
+          <h3 class="mb-4 text-lg font-mono block">
+            {rightComp.label}
+          </h3>
+          <p class="text-darkGrayishBlue font-jura text-xl">
+            {rightComp.value}
+          </p>
+        </div>
+      </div>
     </div>
-    <!-- unlogical code !!! 14 of 12 rel width is assigned -->
-    <div class="w-10/12 h-10/12 border-x-2 border-pastelBlackOlive rounded-none px-24">
-      <!-- <div>123</div> -->
-      {#if gallery}
-        <SimpleLocationMap gallery={gallery} mapStyle="map-large"/> 
-      {:else}
-        <img src={getImage()} class="shadow-xl" alt="">
-      {/if}
-    </div>
-    <div class="w-2/12">
-      <h3 class="mb-4 text-lg font-mono block">
-        {rightComp.label}
-      </h3>
-      <p class="text-darkGrayishBlue font-jura text-xl">
-        {rightComp.value}
-      </p>
-    </div>
+    <DeleteButton/>
+    {#each bottomComp as attr}
+      <div class="mt-12">
+        <h3 class="mb-4 text-lg font-mono block">
+          {attr.label}
+        </h3>
+        <p class="text-darkGrayishBlue text-center font-jura">
+          {attr.value}
+        </p>
+      </div>
+    {/each}
   </div>
-  {#each bottomComp as attr}
-    <div class="mt-16">
-      <h3 class="mb-4 text-lg font-mono block">
-        {attr.label}
-      </h3>
-      <p class="text-darkGrayishBlue text-center font-jura">
-        {attr.value}
-      </p>
-    </div>
-  {/each}
+  
 </div>
+

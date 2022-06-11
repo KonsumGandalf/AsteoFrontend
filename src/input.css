@@ -12,10 +12,16 @@
   height: 230px;
 }
 
-.map-large{
+.map-medium{
   width: 800px;
   height: 600px;
 }
+
+.map-large{
+  width: 1400px;
+  height: 700px;
+}
+
 
 /* @layer base{
   .mystery-button {

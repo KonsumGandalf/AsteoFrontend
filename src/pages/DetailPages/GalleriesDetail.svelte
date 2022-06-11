@@ -5,7 +5,7 @@
   import DetailComponent from "../../components/pageComponent/DetailComponent.svelte";
   import {getContext, onMount} from "svelte";
 
-  const asteoService= getContext("AsteoService");
+  const asteoService = getContext("AsteoService");
 
   let detailEle = {}, addingUser = {};
   let leftComp = {
