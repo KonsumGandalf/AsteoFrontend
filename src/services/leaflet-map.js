@@ -1,7 +1,7 @@
 import * as L from "leaflet";
 
 export class LeafletMap {
-  imap = {};
+  imap;
   control = {};
   overlays = {};
 

@@ -138,12 +138,25 @@ export class AsteoService {
   async getDetail(detailUrl){
     try {
       const response = await axios.get(`${this.baseUrl}/api/${detailUrl}`);
-      return response.data; // [1,23,4,`${this.baseUrl}/api/${detailUrl}` ];
+      return response.data;
     } catch (error) {
       return [];
     }
   }
 
+  async deleteEle(detailUrl){
+    try {
+      const response = await axios.delete(`${this.baseUrl}/api/${detailUrl}`);
+      return response;
+    } catch (error) {
+      return error;
+    }
+  }
+
+  async createEle(detailUrl, ele) {
+    const res = await axios.post(`${this.baseUrl}/api/${detailUrl}`, ele);
+    return res.data;
+  }
 
 
   async donate(donation) {

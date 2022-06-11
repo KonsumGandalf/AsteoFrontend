@@ -15,7 +15,7 @@
 
   onMount(() => url = window.location.href);
 
-  const asteoService= getContext("AsteoService");
+  const asteoService = getContext("AsteoService");
 
   async function login() {
     let success = await asteoService.login(username, password)
@@ -44,7 +44,7 @@
   };
 </script>
 
-<div class="bg-pastelBrightLilac w-auto h-72">
+<div class="bg-pastelBrightLilac w-auto h-72 mb-32">
   <!-- Body of bar-->
   <nav>
     <div class="px-4 lg:px-28 pt-5">

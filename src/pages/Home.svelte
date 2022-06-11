@@ -22,7 +22,7 @@
       content: "Strong imaginations have many benefits, including the ability to think outside the box and boost self-confidence. All the change-makers in society are imaginative. The arts encourage imaginative thinking, especially in kids whose brains are still developing.",
     },
   ]
-  // const asteoService= getContext("AsteoService");
+  // const asteoService = getContext("AsteoService");
   // donationService.logout();
 </script>
 

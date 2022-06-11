@@ -10,7 +10,9 @@
   <div class="w-11/12 mt-4 shadow-xl {classExtensionImg}" >
     <SimpleLocationMap gallery={gallery}/>
   </div>
-  {#each imgCaption as line}
-      <p class="font-mono tracking-wide text-sm text-left">{line}</p>
-  {/each}
+  <div class="mt-4">
+    {#each imgCaption as line}
+        <p class="font-mono tracking-wide text-sm text-left">{line}</p>
+    {/each}
+  </div>
 </div>

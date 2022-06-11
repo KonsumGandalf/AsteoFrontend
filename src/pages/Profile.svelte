@@ -5,7 +5,7 @@
   import ProfileForm from "../components/pageComponent/ProfileForm.svelte";
   import {getContext} from "svelte";
 
-  // const asteoService= getContext("AsteoService");
+  // const asteoService = getContext("AsteoService");
   // donationService.logout();
 </script>
 
