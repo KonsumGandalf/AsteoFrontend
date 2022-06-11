@@ -54,7 +54,7 @@
     <div class="grid grid-cols-6 grid-flow-row gap-6">              
       <LabledInput spanW={3} styledLabel="Epoch Name" bind:value={name} />
       <LabledInput spanW={3} styledLabel="Year Span" bind:value={yearSpan} />
-      <LabledInput spanW={4} styledLabel="Image Url - 1:2 Relation" bind:value={image} />
+      <LabledInput spanW={4} styledLabel="Image Url - 2:1 Relation" bind:value={image} />
       <LabledInput spanW={6} styledLabel="Description" bind:value={description} />           
     </div>
     <div class="px-4 py-2 bg-gray-50 text-right sm:px-6">

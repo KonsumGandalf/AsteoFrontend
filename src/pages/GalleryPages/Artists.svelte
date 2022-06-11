@@ -52,7 +52,7 @@
       <LabledInput spanW={3} styledLabel="First Name" bind:value={firstName} />
       <LabledInput spanW={3} styledLabel="Last Name" bind:value={lastName} />
       <LabledInput spanW={4} styledLabel="Image Url - 1:1 Relation" bind:value={image} />
-      <LabledInput spanW={2} typeInput="number" styledLabel="Number of known artworks" bind:value={countPaintings} />
+      <LabledInput spanW={2} typeInput="number" styledLabel="Number of known Artworks" bind:value={countPaintings} />
       <LabledInput spanW={6} styledLabel="Description" bind:value={description} />           
     </div>
     <div class="px-4 py-2 bg-gray-50 text-right sm:px-6">
