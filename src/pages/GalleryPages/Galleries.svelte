@@ -3,7 +3,7 @@
   import Footer from "../../components/pageComponent/Footer.svelte";
   import GalleryHorizontal from "../../components/subComponent/GalleryHorizontal.svelte";
   import {getContext, onMount} from "svelte";  
-  import FormPlusButton from "../../components/subComponent/FormPlusButton.svelte";
+  import FormPlusButton from "../../components/subComponent/FormButton.svelte";
   import LabledInput from "../../components/subComponent/LabledInput.svelte";
 
   const asteoService = getContext("AsteoService");

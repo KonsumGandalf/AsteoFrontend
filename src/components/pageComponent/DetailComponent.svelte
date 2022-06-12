@@ -1,7 +1,7 @@
 <script>
   import DeleteButton from "../subComponent/DeleteButton.svelte";
   import SimpleLocationMap from "../subComponent/SimpleLocationMap.svelte";
-  export let image, leftComp = {}, rightComp = {}, bottomComp = [], gallery = null;
+  export let image = null, leftComp = {}, rightComp = {}, bottomComp = [], gallery = null;
 
 </script>
 

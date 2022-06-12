@@ -135,6 +135,24 @@ export class AsteoService {
     }
   }
 
+  async getAllUsers(){
+    try {
+      const response = await axios.get(`${this.baseUrl}/api/users`);
+      return response.data;
+    } catch (error) {
+      return [];
+    }
+  }
+
+  async getAllPostsByGallery(galleryId) {
+    try{ 
+      const res = await axios.get(`${this.baseUrl}/api/galleries/${galleryId}/posts`);
+      return res.data;
+    } catch (error) {
+      return [];
+    }
+  }
+
   async getDetail(detailUrl){
     try {
       const response = await axios.get(`${this.baseUrl}/api/${detailUrl}`);
@@ -153,8 +171,18 @@ export class AsteoService {
     }
   }
 
+  async deletePost(id) {
+    const res = await axios.delete(`${this.baseUrl}/api/posts/${id}`);
+    return res.data;
+  };
+
   async createEle(detailUrl, ele) {
     const res = await axios.post(`${this.baseUrl}/api/${detailUrl}`, ele);
+    return res.data;
+  }
+
+  async createPost(galleryId, post) {
+    const res = await axios.post(`${this.baseUrl}/api/galleries/${galleryId}/posts`, post);
     return res.data;
   }
 

@@ -5,7 +5,7 @@
   import LabledInput from "../../components/subComponent/LabledInput.svelte";
   import {getContext, onMount} from "svelte";
   import { push } from "svelte-spa-router";
-  import FormPlusButton from "../../components/subComponent/FormPlusButton.svelte";
+  import FormPlusButton from "../../components/subComponent/FormButton.svelte";
   
   const asteoService = getContext("AsteoService");
 
