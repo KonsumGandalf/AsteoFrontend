@@ -4,6 +4,7 @@
   import MapFooter from "../../components/pageComponent/MapFooter.svelte";
   import DetailComponent from "../../components/pageComponent/DetailComponent.svelte";
   import {getContext, onMount} from "svelte";
+  import PostsList from "../../components/pageComponent/PostsList.svelte";
 
   const asteoService = getContext("AsteoService");
 
@@ -37,4 +38,9 @@
 
 <NavigatorBar bind:title={title}/>
 <DetailComponent bind:leftComp={leftComp} bind:rightComp={rightComp} bind:bottomComp={bottomComp} bind:gallery={detailEle}/>
+{#await detailEle then gallery}
+  {#if gallery._id}
+    <PostsList galleryId={gallery._id} />
+  {/if}
+{/await}
 <Footer/>
