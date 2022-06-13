@@ -69,7 +69,7 @@ let inputAbsDigits, inputChart = [];
   });
 </script>
 
-<div class="container">
+<div class="container ">
     <div class="flex justify-center gap-8">
       {#if numberOfUsers != null && numberOfPosts != null && numberOfLocations != null && numberOfVisitors!= null }
         {#each inputAbsDigits as field} 
@@ -77,9 +77,11 @@ let inputAbsDigits, inputChart = [];
         {/each}
       {/if}
     </div>
-    <div class="flex flex-col">
+    <div class="mt-8">
       {#each inputChart as chart}
+      <div class="flex flex-col border-t border-pastelBlackOlive p-2">
         <ChartComponent bind:data={chart}/>
+      </div>
       {/each}
     </div>
 </div>

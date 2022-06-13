@@ -6,6 +6,7 @@
   import FormPlusButton from "../../components/subComponent/FormButton.svelte";
   import LabledInput from "../../components/subComponent/LabledInput.svelte";
   import SelectButton from "../../components/subComponent/SelectButton.svelte";
+  import ImageAdd from "../../components/subComponent/ImageAdd.svelte";
 
   const asteoService = getContext("AsteoService");
 
@@ -66,6 +67,7 @@
       <SelectButton artist={true} bind:selected={selectedArtist} bind:inputList={artistsList} category="Artist"/>
       <SelectButton bind:selected={selectedGallery} bind:inputList={galleriesList} category="Gallery"/>
       <SelectButton bind:selected={selectedEpoch} bind:inputList={epochsList} category="Epoch"/>
+      <ImageAdd/>
 
     </div>
     <div class="px-4 py-2 bg-gray-50 text-right sm:px-6">

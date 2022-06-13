@@ -38,7 +38,7 @@
       </div>
     </div>          
     <div>
-      <a class="p-12" href="/#">
+      <a class="pt-12" href="/#">
           <img class="" src="/design/images/icons/AsteoLogoWhite.png" alt="">
       </a>
     </div>

@@ -64,7 +64,6 @@
         { label: "Number Of Visitors since Opening", value: gallery.countAllVisitors},
       ]
     },
-    
   ];
   })
 </script>
