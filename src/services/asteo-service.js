@@ -153,6 +153,15 @@ export class AsteoService {
     }
   }
 
+  async getAllPosts(galleryId) {
+    try{ 
+      const res = await axios.get(`${this.baseUrl}/api/posts`);
+      return res.data;
+    } catch (error) {
+      return [];
+    }
+  }
+
   async getDetail(detailUrl){
     try {
       const response = await axios.get(`${this.baseUrl}/api/${detailUrl}`);
