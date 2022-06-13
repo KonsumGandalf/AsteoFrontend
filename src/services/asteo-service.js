@@ -63,6 +63,24 @@ export class AsteoService {
     }
   }
 
+  async updateUser(user) {
+    try{
+      const res = await axios.post(`${this.baseUrl}/api/users/update`, user);
+      return res.data;
+    } catch (error) {
+      return null;
+    }
+  }
+
+  async deleteUser(id) {
+    try{
+      const res = await axios.delete(`${this.baseUrl}/api/users/${id}`);
+      return res.data;
+    } catch (error) {
+      return null;
+    }
+  }
+
   async getUser(id){
     try {
       const res = await axios.get(`${this.baseUrl}/api/users/${id}`);
