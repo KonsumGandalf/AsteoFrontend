@@ -7,7 +7,7 @@
     let count = 0; 
     const updateCount = () => {
       const target = +valueText;
-      const inc = target/4;
+      const inc = 1; //target/4;
       if (count < target){
         count += inc;
         setTimeout(updateCount, 300);
@@ -25,7 +25,7 @@
             <div class="mx-auto material-icons-outlined text-pastelBlackEerie">{iconName}</div>
         </div>
         <div class="flex flex-col justify-center items-center space-y-2">
-            <div class="text-sm text-center">{headerText}</div>
+            <div class="text-sm text-center mr-4">{headerText}</div>
             {#if Number.isInteger(valueText)}
               <div id="counter" class="counter text-lg text-center text-pastelBlackEerie">{count}</div>
             {:else}
