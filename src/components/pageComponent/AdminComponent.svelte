@@ -30,13 +30,15 @@
   }
 
   async function deleteUser(id) {
-    let error = await asteoService.deleteUser(id);
-    if (error) {
+    let res = await asteoService.deleteUser(id);
+    console.log(res);
+    try{
+      if (res.status === 204) {
+      loadUserTable();
+      }
+    } catch (error) {
       errorMessage = "You are not allowed to set those values.";
       alert(errorMessage);
-    } 
-    else{
-      loadUserTable();
     }
   }
 </script>

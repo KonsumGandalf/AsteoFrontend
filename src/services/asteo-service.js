@@ -75,7 +75,7 @@ export class AsteoService {
   async deleteUser(id) {
     try{
       const res = await axios.delete(`${this.baseUrl}/api/users/${id}`);
-      return res.data;
+      return res;
     } catch (error) {
       return null;
     }
