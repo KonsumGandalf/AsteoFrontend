@@ -2,14 +2,14 @@
   import { each } from "svelte/internal";
   import {getContext, onMount} from "svelte";
   import IconHorizontal from "../subComponent/IconHorizontal.svelte"
-  import ChartComponent from "../subComponent/ChartComponent.svelte";
+  import ChartComponent from "../subComponent/Content/ChartComponent.svelte";
   
   const asteoService = getContext("AsteoService");
   
   let inputAbsDigits, inputChart = [], errorMessage;
   
   let labelList = [{name: "Avatar", w: 1}, {name: "Username", w: 1}, {name: "Email", w: 2}, {name: "First Name", w: 1}, {name: "Last Name", w: 1}, {name: "Rank", w: 1}, {name: "Actions", w:1}];
-  let users = [], ranks = {0: "Basic", 1: "User", 2: "Owner"}; 
+  let users = [], ranks = {0: "Basic User", 1: "Admin", 2: "Owner"};; 
   let editMode = false;
 
   onMount(async () => {
@@ -31,7 +31,6 @@
 
   async function deleteUser(id) {
     let res = await asteoService.deleteUser(id);
-    console.log(res);
     try{
       if (res.status === 204) {
       loadUserTable();

@@ -1,9 +1,9 @@
 <script>
   import NavigatorBar from "../../components/pageComponent/NavigatorBar.svelte";
   import Footer from "../../components/pageComponent/Footer.svelte";
-  import GalleryHorizontal from "../../components/subComponent/GalleryHorizontal.svelte";
+  import GalleryHorizontal from "../../components/subComponent/Content/GalleryHorizontal.svelte";
   import {getContext, onMount} from "svelte";  
-  import FormPlusButton from "../../components/subComponent/FormButton.svelte";
+  import FormPlusButton from "../../components/subComponent/Buttons/FormButton.svelte";
   import LabledInput from "../../components/subComponent/LabledInput.svelte";
 
   const asteoService = getContext("AsteoService");

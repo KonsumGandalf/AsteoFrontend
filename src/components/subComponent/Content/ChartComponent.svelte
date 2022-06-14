@@ -1,8 +1,8 @@
 <script lang="js">
   import Chart from 'svelte-frappe-charts';
 
-  export let data = {};
-  export let selectedType , build = true;
+  export let data = {}, build = true;
+  let selectedType;
   const options = ["pie","donut","percentage","bar","line"]
 
   async function rebuildChart(){
@@ -10,6 +10,7 @@
     await new Promise(resolve => setTimeout(resolve, 4000));
     build = true;
   }
+
 </script>
 
 <form class="my-8 mx-auto">

@@ -5,9 +5,7 @@ export class AsteoService {
   // baseUrl = "https://obscure-refuge-81832.herokuapp.com";
 
   constructor(baseUrl) {
-    console.log("HELLO");
     this.baseUrl = "http://localhost:4000";
-    console.log(this.baseUrl);
     const asteoCredentials = localStorage.asteo;
     if (asteoCredentials) {
       const savedUser = JSON.parse(asteoCredentials);
@@ -49,9 +47,9 @@ export class AsteoService {
     localStorage.removeItem("asteo");
   }
 
-  async register(firstName, lastName, email, username, password) {
+  async register(user) {
     try {
-      await axios.post(`${this.baseUrl}/api/users`, {firstName, lastName, email, username, password});
+      const res = await axios.post(`${this.baseUrl}/api/users`, user);
       user.set({
         username: "",
         token: "",
@@ -115,6 +113,16 @@ export class AsteoService {
     } catch (error) {
       return [];
     }
+  }
+
+  async galleryCheckIn(id) {
+    const res = await axios.post(`${this.baseUrl}/api/galleries/${id}/checkIn`);
+    return res.data;
+  };
+
+  async galleryCheckOut(id) {
+    const res = await axios.post(`${this.baseUrl}/api/galleries/${id}/checkOut`);
+    return res.data;
   }
 
   async getAllEpochs(){

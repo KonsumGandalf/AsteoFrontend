@@ -7,8 +7,8 @@
     let count = 0; 
     const updateCount = () => {
       const target = +valueText;
-      const inc = 1; //target/4;
-      if (count < target){
+      const inc = Math.ceil(target/5);
+      if (count + inc < target){
         count += inc;
         setTimeout(updateCount, 300);
       } else {

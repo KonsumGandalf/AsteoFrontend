@@ -1,7 +1,7 @@
 <script>
   import NavigatorBar from "../components/pageComponent/NavigatorBar.svelte";
-  import ButtonRegisterLog from "../components/subComponent/ButtonRegisterLog.svelte";
-  import HeadingContent from "../components/subComponent/HeadingContent.svelte";
+  import ButtonRegisterLog from "../components/subComponent/Buttons/RegisterLogButton.svelte";
+  import HeadingContent from "../components/subComponent/Content/HeadingContent.svelte";
   import Footer from "../components/pageComponent/Footer.svelte";
   import {getContext} from "svelte";
 

@@ -2,7 +2,7 @@
 import { each } from "svelte/internal";
 import {getContext, onMount} from "svelte";
 import IconHorizontal from "../subComponent/IconHorizontal.svelte"
-import ChartComponent from "../subComponent/ChartComponent.svelte";
+import ChartComponent from "../subComponent/Content/ChartComponent.svelte";
 
 const asteoService = getContext("AsteoService");
 let paintings = [], epochs, galleries;
@@ -15,7 +15,6 @@ let inputAbsDigits, inputChart = [];
     numberOfUsers = (await asteoService.getAllUsers()).length;
     numberOfPosts = (await asteoService.getAllPosts()).length;
     const galleriesVisitors = galleries.map((ele) => ele.countAllVisitors);
-    console.log(galleriesVisitors);
     numberOfVisitors = galleriesVisitors.reduce((previousValue, currentValue) => previousValue + currentValue);
     numberOfLocations = galleries.length;
     inputAbsDigits = [
@@ -65,7 +64,6 @@ let inputAbsDigits, inputChart = [];
         datasets: [{values: galleries.map((gallery) => galleryOccurences[gallery._id])}],
       }
     ];
-    console.log(inputChart);
   });
 </script>
 

@@ -1,12 +1,12 @@
 <script>
     import {getContext, onMount} from "svelte";
     import CommentDisplay from "../subComponent/CommentDisplay.svelte";
-    import FormButton from "../subComponent/FormButton.svelte";
+    import FormButton from "../subComponent/Buttons/FormButton.svelte";
     import RatingComponent from "../subComponent/RatingComponent.svelte";
     const asteoService = getContext("AsteoService");
     import { get } from "svelte/store";
     import { user } from "../../stores.js";
-import CommentCreate from "../subComponent/CommentCreate.svelte";
+    import CommentCreate from "../subComponent/CommentCreate.svelte";
     
     export let galleryId;
     let posts = [], commentHidden = true, newPost, errorMessage, ownProfil;
@@ -41,7 +41,6 @@ import CommentCreate from "../subComponent/CommentCreate.svelte";
 
     async function deletePost(post){
       const res = await asteoService.deletePost(post._id);
-      console.log(res.status);
       if (res.status) {
         const msg = res.response.data.message.toString();
         alert(msg);

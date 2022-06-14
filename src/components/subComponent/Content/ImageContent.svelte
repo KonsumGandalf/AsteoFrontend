@@ -1,6 +1,6 @@
 <script>
 import { each } from "svelte/internal";
-import ImageCaption from "./ImageCaption.svelte";
+import ImageCaption from "../ImageCaption.svelte";
 
     export let heading = "";
     export let contentList = [];

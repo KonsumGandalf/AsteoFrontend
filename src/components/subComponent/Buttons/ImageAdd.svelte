@@ -4,7 +4,6 @@
 
 
   async function uploadImage(){
-    console.log(123);
     fileName = "Image uploaded";
   }
 </script>

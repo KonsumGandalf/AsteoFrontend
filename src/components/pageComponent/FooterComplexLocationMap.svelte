@@ -20,14 +20,11 @@
   onMount(async () => {
     let paintings;
     if (epoch) {
-      console.log(2);
       paintings = (await asteoService.getAllPaintings()).filter((painting) => painting.epoch === epoch._id);
     }
     if (artist) {
       paintings = (await asteoService.getAllPaintings());
       paintings = paintings.filter((painting) => painting.artist === artist._id);
-      console.log(1);
-      console.log(paintings);
     }
     const LayerName = "Galleries";
     map = new LeafletMap(mapName, mapConfig);
@@ -42,7 +39,6 @@
   });
   
   export function addGalleryMarker(gallery, LayerName) {
-    console.log("gallery");
     const donationStr = `${gallery.name}`;    
     map.addMarker({lat: gallery.lat, lng: gallery.lng}, donationStr, LayerName); // maybe with string instead of int
     map.moveTo(3, {lat: gallery.lat, lng: gallery.lng});

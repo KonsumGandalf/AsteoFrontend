@@ -1,8 +1,8 @@
 <script lang="ts">
     import { push } from "svelte-spa-router";
     import { getContext } from "svelte";
-    import LabelInput from "../subComponent/LabledInput.svelte";
-    import ImageContent from "../subComponent/ImageContent.svelte";
+    import LabelInput from "../../subComponent/LabledInput.svelte";
+    import ImageContent from "../../subComponent/Content/ImageContent.svelte";
   
     let username = "";
     let password = "";
@@ -12,7 +12,6 @@
   
     async function login() {
       let success = await asteoService.login(username, password);
-      console.log(username,)
       if (success) {
         push("/profile");
       } else {

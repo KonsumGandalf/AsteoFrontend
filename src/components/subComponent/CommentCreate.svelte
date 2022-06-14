@@ -1,6 +1,6 @@
 <script>
   export let image;
-  export let rating, headline, comment;
+  export let rating, headline = "", comment = "";
 </script>
 
 <div class="flex flex-col items-justify-start space-y-2">

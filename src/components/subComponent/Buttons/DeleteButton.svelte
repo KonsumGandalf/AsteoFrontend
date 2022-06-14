@@ -16,8 +16,8 @@
   }
 </script>
 
-<div class="mx-auto flex items-center w-full mt-8">
-  <button on:click={deleteEle} class="mx-auto border border-4 bg-white border-pastelBlackOlive px-4 py-2 rounded-lg hover:bg-slate-200">
-    <button class="material-icons-outlined text-pastelBlackOlive">delete</button>
+<div class="mx-auto rounded-lg shadow-md mt-8">
+  <button on:click={deleteEle} class="mx-auto border border-2 bg-white border-pastelBlackOlive px-4 py-2 rounded-lg hover:bg-slate-200">
+    <div class="material-icons-outlined mt-1 text-pastelBlackOlive">delete</div>
   </button>
 </div>

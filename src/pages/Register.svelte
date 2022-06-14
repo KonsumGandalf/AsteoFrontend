@@ -1,7 +1,7 @@
 <script>
   import NavigatorBar from "../components/pageComponent/NavigatorBar.svelte";
   import Footer from "../components/pageComponent/Footer.svelte";
-  import RegisterForm from "../components/pageComponent/RegisterForm.svelte";
+  import RegisterForm from "../components/pageComponent/Forms/RegisterForm.svelte";
   import {getContext} from "svelte";
   const Waves = "/design/images/artworks/Waves.jpg";
 

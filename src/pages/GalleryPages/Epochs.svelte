@@ -1,11 +1,11 @@
 <script>
   import NavigatorBar from "../../components/pageComponent/NavigatorBar.svelte";
   import Footer from "../../components/pageComponent/Footer.svelte";
-  import GalleryHorizontal from "../../components/subComponent/GalleryHorizontal.svelte";
+  import GalleryHorizontal from "../../components/subComponent/Content/GalleryHorizontal.svelte";
   import LabledInput from "../../components/subComponent/LabledInput.svelte";
   import {getContext, onMount} from "svelte";
   import { push } from "svelte-spa-router";
-  import FormPlusButton from "../../components/subComponent/FormButton.svelte";
+  import FormPlusButton from "../../components/subComponent/Buttons/FormButton.svelte";
   
   const asteoService = getContext("AsteoService");
 
@@ -32,7 +32,6 @@
   };
 
   async function createEpoch(){
-    console.log({name, yearSpan, description, image});
     let success = await asteoService.createEle((window.location.href).split("/#/")[1], {name, yearSpan, description, image});
     if (success) {
       formHidden = !formHidden;

@@ -24,7 +24,6 @@
       
       paintings.forEach(async (painting) => {
         const gallery = await asteoService.getGallery(painting.gallery);
-        console.log(gallery);
         addGalleryMarker(gallery, LayerName);
       });
       
@@ -42,7 +41,6 @@
       
       paintings.forEach(async (painting) => {
         const gallery = await asteoService.getGallery(painting.gallery);
-        console.log(gallery);
         addGalleryMarker(gallery, LayerName);
       });
       

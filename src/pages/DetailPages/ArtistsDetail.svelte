@@ -3,7 +3,7 @@
   import Footer from "../../components/pageComponent/Footer.svelte";
   import DetailComponent from "../../components/pageComponent/DetailComponent.svelte";
   import MapFooter from "../../components/pageComponent/MapFooter.svelte";
-  import DeleteButton from "../../components/subComponent/DeleteButton.svelte";
+  import DeleteButton from "../../components/subComponent/Buttons/DeleteButton.svelte";
   import {getContext, onMount} from "svelte";
 
   const asteoService = getContext("AsteoService");

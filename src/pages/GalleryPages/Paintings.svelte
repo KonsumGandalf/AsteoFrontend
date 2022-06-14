@@ -1,12 +1,12 @@
 <script>
   import NavigatorBar from "../../components/pageComponent/NavigatorBar.svelte";
   import Footer from "../../components/pageComponent/Footer.svelte";
-  import GalleryHorizontal from "../../components/subComponent/GalleryHorizontal.svelte";
+  import GalleryHorizontal from "../../components/subComponent/Content/GalleryHorizontal.svelte";
   import {getContext, onMount} from "svelte";
-  import FormPlusButton from "../../components/subComponent/FormButton.svelte";
+  import FormPlusButton from "../../components/subComponent/Buttons/FormButton.svelte";
   import LabledInput from "../../components/subComponent/LabledInput.svelte";
-  import SelectButton from "../../components/subComponent/SelectButton.svelte";
-  import ImageAdd from "../../components/subComponent/ImageAdd.svelte";
+  import SelectButton from "../../components/subComponent/Buttons/SelectButton.svelte";
+  import ImageAdd from "../../components/subComponent/Buttons/ImageAdd.svelte";
 
   const asteoService = getContext("AsteoService");
 
@@ -35,7 +35,6 @@
       const artist =  artistsList.find((ele) => selectedArtist === `${ele.firstName} ${ele.lastName}`);
       const gallery =  galleriesList.find((ele) => selectedGallery === ele.name);
       const epoch =  epochsList.find((ele) => selectedEpoch === ele.name);
-      console.log({title, year, price, image, epoch, artist, gallery});
       let success = await asteoService.createEle((window.location.href).split("/#/")[1], {title, year, price, image, epoch, artist, gallery});
       if (success) {
         formHidden = !formHidden;

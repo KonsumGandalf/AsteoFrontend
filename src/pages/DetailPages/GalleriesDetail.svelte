@@ -29,7 +29,10 @@
     detailEle = (await asteoService.getDetail((window.location.href).split("/#/")[1]));
     addingUser = await asteoService.getUser(detailEle.user);
     title = `${detailEle.name}`
-    leftComp.value = detailEle.avgRating;
+    const allPosts = (await asteoService.getAllPostsByGallery(detailEle._id));
+    console.log(allPosts);
+    const avgRating = allPosts.reduce((sum, ele) => sum + ele.rating, 0) / allPosts.length;
+    leftComp.value = avgRating;
     rightComp.value = addingUser.username;
     bottomComp[0].value = detailEle.countAllVisitors;
     bottomComp[1].value = detailEle.countCurVisitors;

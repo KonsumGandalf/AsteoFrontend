@@ -2,6 +2,8 @@
   import {push} from "svelte-spa-router";
   import {getContext} from "svelte";
   import { onMount } from 'svelte';
+  import { get } from "svelte/store";
+  import { user } from "../../stores.js";
 
   const Pages = ["Home", "Epochs", "Artists", "Galleries", "Paintings", "Discovery", "Analytics", "Profile"]
   // const Forms = ["Login","Register"];
@@ -40,8 +42,16 @@
     else if(oldIndex === -1){ // for the forms login && register
       return (window.location.href.includes("register") ? "login" : "register");
     }
-    return Pages[oldIndex+addNumber].toLowerCase();
+    return nextLink(Pages[oldIndex+addNumber].toLowerCase());
   };
+
+  /**
+   * if the user is already logged in he will be transmitted to the wished page
+   * otherwise he has to to authenticate first
+   */
+  function nextLink(page){
+    return (get(user)._id !== undefined) ? page : "login"; 
+  }
 </script>
 
 <div class="bg-pastelBrightLilac w-auto h-72 mb-32">
@@ -56,7 +66,7 @@
         </div>
         <div class="flex space-x-1 items-center">
           {#each Pages as page}
-            <a href="/#/{page.toLowerCase()}" class="hover:border-white {window.location.href.includes(page.toLowerCase()) ? 'border-b-2 border-pastelBlackOlive' : ''} text-pastelBlackEerie font-mono py-5 px-2 hover:text-white transition duration-300">{page}</a>
+            <a href="/#/{nextLink(page.toLowerCase())}" class="hover:border-white {window.location.href.includes(page.toLowerCase()) ? 'border-b-2 border-pastelBlackOlive' : ''} text-pastelBlackEerie font-mono py-5 px-2 hover:text-white transition duration-300">{page}</a>
           {/each}
         </div>
       
@@ -75,7 +85,7 @@
   <!-- Body of Picasso -->
   <div class="flex flex-auto justify-between px-20 py-16">
     <a href="/#/{newPage(-1)}" class="material-icons-outlined md-32 mr-2 hover:text-white transition duration-300">arrow_back_ios</a>
-    <div class="text-4xl font-josefin lg:text-9xl tracking-widest uppercase mt-4">{title}</div>
+    <div class="text-4xl font-josefin lg:text-9xl tracking-wide uppercase mt-4">{title}</div>
     <a href="/#/{newPage(+1)}" class="material-icons-outlined md-32 mr-2 hover:text-white transition duration-300">arrow_forward_ios</a>
   </div>
 </div>

@@ -1,6 +1,6 @@
 <script>
-    import ImageCaption from "./ImageCaption.svelte";
-    import MapCaption from "./MapCaption.svelte";
+    import ImageCaption from "../ImageCaption.svelte";
+    import MapCaption from "../MapCaption.svelte";
     import {onMount} from "svelte";
 
     export let imageList = ["/design/images/artworks/Irises.jpg", "/design/images/artworks/Waves.jpg"]

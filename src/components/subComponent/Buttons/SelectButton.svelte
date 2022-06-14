@@ -1,6 +1,6 @@
 <script>
   export let inputList = [];
-  export let selected;
+  export let selected = null;
   export let category;
   export let artist = false;
   export let spanW = 3;
@@ -9,7 +9,7 @@
 <form class="col-span-{spanW}">
   <div class="flex items-center mb-3 xl:w-96">
       <select bind:value={selected} class="form-select appearance-none block w-full px-3 py-1.5 font-mono text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none">
-        <option selected>Select the {category} you want to filter</option>
+        <option selected>Select the {category}</option>
         {#each inputList as option}
           {#if artist}
             <option>{`${option.firstName} ${option.lastName}`}</option>
