@@ -1,13 +1,11 @@
 import axios from "axios";
-import {user} from "../stores";
+import { user } from "../stores";
 
 export class AsteoService {
   // baseUrl = "https://obscure-refuge-81832.herokuapp.com";
 
   constructor(baseUrl) {
-    console.log("HELLO");
     this.baseUrl = "http://localhost:4000";
-    console.log(this.baseUrl);
     const asteoCredentials = localStorage.asteo;
     if (asteoCredentials) {
       const savedUser = JSON.parse(asteoCredentials);
@@ -16,21 +14,21 @@ export class AsteoService {
         token: savedUser.token,
         _id: savedUser._id,
       });
-      axios.defaults.headers.common["Authorization"] = "Bearer " + savedUser.token;
+      axios.defaults.headers.common.Authorization = `Bearer ${savedUser.token}`;
     }
   }
 
   async login(username, password) {
     try {
-      const response = await axios.post(`${this.baseUrl}/api/users/authenticate`, {username, password});
-      axios.defaults.headers.common["Authorization"] = "Bearer " + response.data.token;
+      const response = await axios.post(`${this.baseUrl}/api/users/authenticate`, { username, password });
+      axios.defaults.headers.common.Authorization = `Bearer ${response.data.token}`;
       if (response.data.success) {
         user.set({
           username: username,
           token: response.data.token,
           _id: response.data._id,
         });
-        localStorage.asteo = JSON.stringify({username: username, token: response.data.token, id: response.data._id});
+        localStorage.asteo = JSON.stringify({ username: username, token: response.data.token, id: response.data._id });
         return true;
       }
       return false;
@@ -45,13 +43,13 @@ export class AsteoService {
       token: "",
       _id: "",
     });
-    axios.defaults.headers.common["Authorization"] = "";
+    axios.defaults.headers.common.Authorization = "";
     localStorage.removeItem("asteo");
   }
 
-  async register(firstName, lastName, email, username, password) {
+  async register(user) {
     try {
-      await axios.post(`${this.baseUrl}/api/users`, {firstName, lastName, email, username, password});
+      const res = await axios.post(`${this.baseUrl}/api/users`, user);
       user.set({
         username: "",
         token: "",
@@ -64,7 +62,7 @@ export class AsteoService {
   }
 
   async updateUser(user) {
-    try{
+    try {
       const res = await axios.post(`${this.baseUrl}/api/users/update`, user);
       return res.data;
     } catch (error) {
@@ -73,15 +71,15 @@ export class AsteoService {
   }
 
   async deleteUser(id) {
-    try{
+    try {
       const res = await axios.delete(`${this.baseUrl}/api/users/${id}`);
-      return res.data;
+      return res;
     } catch (error) {
       return null;
     }
   }
 
-  async getUser(id){
+  async getUser(id) {
     try {
       const res = await axios.get(`${this.baseUrl}/api/users/${id}`);
       return res.data;
@@ -90,34 +88,44 @@ export class AsteoService {
     }
   }
 
-  async getEpoch(id){
+  async getEpoch(id) {
     try {
-    const res = await axios.get(`${this.baseUrl}/api/epochs/${id}`);
-    return res.data;
+      const res = await axios.get(`${this.baseUrl}/api/epochs/${id}`);
+      return res.data;
     } catch (error) {
       return [];
     }
   }
 
-  async getArtist(id){
+  async getArtist(id) {
     try {
-    const res = await axios.get(`${this.baseUrl}/api/artists/${id}`);
-    return res.data;
+      const res = await axios.get(`${this.baseUrl}/api/artists/${id}`);
+      return res.data;
     } catch (error) {
       return [];
     }
   }
 
-  async getGallery(id){
+  async getGallery(id) {
     try {
-    const res = await axios.get(`${this.baseUrl}/api/galleries/${id}`);
-    return res.data;
+      const res = await axios.get(`${this.baseUrl}/api/galleries/${id}`);
+      return res.data;
     } catch (error) {
       return [];
     }
   }
 
-  async getAllEpochs(){
+  async galleryCheckIn(id) {
+    const res = await axios.post(`${this.baseUrl}/api/galleries/${id}/checkIn`);
+    return res.data;
+  }
+
+  async galleryCheckOut(id) {
+    const res = await axios.post(`${this.baseUrl}/api/galleries/${id}/checkOut`);
+    return res.data;
+  }
+
+  async getAllEpochs() {
     try {
       const response = await axios.get(`${this.baseUrl}/api/epochs`);
       return response.data;
@@ -126,7 +134,7 @@ export class AsteoService {
     }
   }
 
-  async getAllArtists(){
+  async getAllArtists() {
     try {
       const response = await axios.get(`${this.baseUrl}/api/artists`);
       return response.data;
@@ -135,7 +143,7 @@ export class AsteoService {
     }
   }
 
-  async getAllGalleries(){
+  async getAllGalleries() {
     try {
       const response = await axios.get(`${this.baseUrl}/api/galleries`);
       return response.data;
@@ -144,7 +152,7 @@ export class AsteoService {
     }
   }
 
-  async getAllPaintings(){
+  async getAllPaintings() {
     try {
       const response = await axios.get(`${this.baseUrl}/api/paintings`);
       return response.data;
@@ -153,7 +161,7 @@ export class AsteoService {
     }
   }
 
-  async getAllUsers(){
+  async getAllUsers() {
     try {
       const response = await axios.get(`${this.baseUrl}/api/users`);
       return response.data;
@@ -163,7 +171,7 @@ export class AsteoService {
   }
 
   async getAllPostsByGallery(galleryId) {
-    try{ 
+    try {
       const res = await axios.get(`${this.baseUrl}/api/galleries/${galleryId}/posts`);
       return res.data;
     } catch (error) {
@@ -172,7 +180,7 @@ export class AsteoService {
   }
 
   async getAllPosts(galleryId) {
-    try{ 
+    try {
       const res = await axios.get(`${this.baseUrl}/api/posts`);
       return res.data;
     } catch (error) {
@@ -180,7 +188,7 @@ export class AsteoService {
     }
   }
 
-  async getDetail(detailUrl){
+  async getDetail(detailUrl) {
     try {
       const response = await axios.get(`${this.baseUrl}/api/${detailUrl}`);
       return response.data;
@@ -189,7 +197,7 @@ export class AsteoService {
     }
   }
 
-  async deleteEle(detailUrl){
+  async deleteEle(detailUrl) {
     try {
       const response = await axios.delete(`${this.baseUrl}/api/${detailUrl}`);
       return response;
@@ -201,7 +209,7 @@ export class AsteoService {
   async deletePost(id) {
     const res = await axios.delete(`${this.baseUrl}/api/posts/${id}`);
     return res.data;
-  };
+  }
 
   async createEle(detailUrl, ele) {
     const res = await axios.post(`${this.baseUrl}/api/${detailUrl}`, ele);
@@ -213,10 +221,9 @@ export class AsteoService {
     return res.data;
   }
 
-
   async donate(donation) {
     try {
-      const response = await axios.post(this.baseUrl + "/api/candidates/" + donation.candidate + "/donations", donation);
+      const response = await axios.post(`${this.baseUrl}/api/candidates/${donation.candidate}/donations`, donation);
       return response.status == 200;
     } catch (error) {
       return false;
@@ -225,7 +232,7 @@ export class AsteoService {
 
   async getCandidates() {
     try {
-      const response = await axios.get(this.baseUrl + "/api/candidates");
+      const response = await axios.get(`${this.baseUrl}/api/candidates`);
       return response.data;
     } catch (error) {
       return [];
@@ -234,7 +241,7 @@ export class AsteoService {
 
   async getDonations() {
     try {
-      const response = await axios.get(this.baseUrl + "/api/donations");
+      const response = await axios.get(`${this.baseUrl}/api/donations`);
       return response.data;
     } catch (error) {
       return [];

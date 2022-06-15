@@ -2,7 +2,9 @@ import * as L from "leaflet";
 
 export class LeafletMap {
   imap;
+
   control = {};
+
   overlays = {};
 
   // https://leaflet-extras.github.io/leaflet-providers/preview/
@@ -66,9 +68,9 @@ export class LeafletMap {
 
   addMarker(location, popupText = "", layerTitle = "default") {
     let group = {};
-    let marker = L.marker([location.lat, location.lng]);
+    const marker = L.marker([location.lat, location.lng]);
     if (popupText) {
-      var popup = L.popup({autoClose: false, closeOnClick: false});
+      const popup = L.popup({ autoClose: false, closeOnClick: false });
       popup.setContent(popupText);
       marker.bindPopup(popup);
     }
@@ -84,7 +86,7 @@ export class LeafletMap {
 
   invalidateSize() {
     this.imap.invalidateSize();
-    let hiddenMethodMap = this.imap;
+    const hiddenMethodMap = this.imap;
     hiddenMethodMap._onResize();
   }
 }

@@ -1,4 +1,7 @@
 {
   "printWidth": 140,
-  "bracketSpacing": false
+  "bracketSpacing": false,
+  "tabWidth": 2,
+  "semi": false,  
+  "plugins": ["prettier-plugin-svelte"]
 }
