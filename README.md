@@ -28,7 +28,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="">
+  <a href="https://asteo.netlify.app/">
     <img src="public\design\images\icons\AsteoLogoWhite.png" alt="Logo" width="300" height="300">
   </a>
 
@@ -153,6 +153,13 @@ _Below is an example of how you can instruct your audience on installing and set
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
+### Usage
+
+Template Login:
+  ```sh
+    Username: HanSolo
+    Password: secret
+  ```
 
 
 <!-- LICENSE -->
