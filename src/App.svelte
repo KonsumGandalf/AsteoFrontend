@@ -19,7 +19,7 @@
   
   import { AsteoService } from "./services/asteo-service";
 
-  setContext("AsteoService", new AsteoService("http://localhost:4000"));
+  setContext("AsteoService", new AsteoService("https://infinite-falls-08364.herokuapp.com"));
 
   const routes = {
     "/": Home,

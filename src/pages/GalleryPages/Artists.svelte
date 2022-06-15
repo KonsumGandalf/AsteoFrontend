@@ -78,7 +78,7 @@
 {#await artistsList}
 <p>waiting</p>
 {:then value} 
-<GalleryHorizontal imgPerLine={3} bind:imgList input={value} bind:refList={idList} />
+<GalleryHorizontal imgPerLine={4} bind:imgList input={value} bind:refList={idList} />
 {:catch error}
 	<p style="color: red">{error.message}</p>
 {/await}
