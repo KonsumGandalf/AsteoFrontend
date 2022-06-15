@@ -67,7 +67,7 @@
 ## About The Project
 
 <a href="https://asteo.netlify.app/">
-    <img src="public\design\images\icons\Preview.png" alt="Logo" width="800" height="300">
+    <img src="public\design\images\icons\Preview.png" alt="Logo" width="800">
 </a>
 
 This project is primarily used to showcase one's skills. It was created for the subject Fullstack Development at the OTH Regensburg and has no commercial background. 
