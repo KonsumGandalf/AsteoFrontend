@@ -5,7 +5,7 @@ export class AsteoService {
   // baseUrl = "https://obscure-refuge-81832.herokuapp.com";
 
   constructor(baseUrl) {
-    this.baseUrl = "http://localhost:4000";
+    this.baseUrl = baseUrl || "https://infinite-falls-08364.herokuapp.com";
     const asteoCredentials = localStorage.asteo;
     if (asteoCredentials) {
       const savedUser = JSON.parse(asteoCredentials);
