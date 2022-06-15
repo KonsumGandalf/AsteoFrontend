@@ -66,7 +66,9 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://asteo.netlify.app/)
+<a href="https://asteo.netlify.app/">
+    <img src="public\design\images\icons\Preview.png" alt="Logo" width="800" height="300">
+</a>
 
 This project is primarily used to showcase one's skills. It was created for the subject Fullstack Development at the OTH Regensburg and has no commercial background. 
 The teaching professor was <a href="public\design\screenshot.png">Eamonn de Leastar.
@@ -209,4 +211,4 @@ Use this space to list resources you find helpful and would like to give credit 
 [license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/david-schmidt-09b69b1b6/
-[product-screenshot]: public\design\screenshot.png
+[product-screenshot]: public\design\images\icons\Preview.png
