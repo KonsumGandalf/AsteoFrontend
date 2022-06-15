@@ -1,15 +1,16 @@
 <script>
-  import NavigatorBar from "../components/NavigatorBar.svelte";
-  import Footer from "../components/Footer.svelte";
-  import RegisterForm from "../components/RegisterForm.svelte";
-  import {getContext} from "svelte";
+  import { getContext } from "svelte";
+  import NavigatorBar from "../components/pageComponent/NavigatorBar.svelte";
+  import Footer from "../components/pageComponent/Footer.svelte";
+  import RegisterForm from "../components/pageComponent/Forms/RegisterForm.svelte";
+  
   const Waves = "/design/images/artworks/Waves.jpg";
 
-  // const donationService = getContext("DonationService");
+  // const asteoService = getContext("AsteoService");
   // donationService.logout();
 </script>
 
-
-<NavigatorBar title="Register"/>
-<RegisterForm/>
-<Footer/>
+<NavigatorBar title="Register" />
+<RegisterForm />
+<div class="p-4 mt-4" />
+<Footer />

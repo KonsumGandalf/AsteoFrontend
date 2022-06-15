@@ -1,12 +1,13 @@
 <script>
-  import NavigatorBar from "../components/NavigatorBar.svelte";
-  import Footer from "../components/Footer.svelte";
-  import {getContext} from "svelte";
+  import { getContext } from "svelte";
+  import NavigatorBar from "../components/pageComponent/NavigatorBar.svelte";
+  import Footer from "../components/pageComponent/Footer.svelte";
+  import ComplexLocationMap from "../components/pageComponent/ComplexLocationMap.svelte";
 
-  // const donationService = getContext("DonationService");
+  // const asteoService = getContext("AsteoService");
   // donationService.logout();
 </script>
 
-
-<NavigatorBar/>
-<Footer/>
+<NavigatorBar title="Discovery" />
+<ComplexLocationMap />
+<Footer />
