@@ -1,10 +1,14 @@
 <script>
   import CheckInButton from "../subComponent/Buttons/CheckInButton.svelte";
   import CheckOutButton from "../subComponent/Buttons/CheckOutButton.svelte";
-import DeleteButton from "../subComponent/Buttons/DeleteButton.svelte";
+  import DeleteButton from "../subComponent/Buttons/DeleteButton.svelte";
   import SimpleLocationMap from "../subComponent/SimpleLocationMap.svelte";
-  export let image = null, leftComp = {}, rightComp = {}, bottomComp = [], gallery = null;
-
+  
+  export let image = null;
+    export let leftComp = {};
+    export let rightComp = {};
+    export let bottomComp = [];
+    export let gallery = null;
 </script>
 
 <div class="mx-auto w-9/12">
@@ -22,9 +26,9 @@ import DeleteButton from "../subComponent/Buttons/DeleteButton.svelte";
       <div class="col-span-10 h-10/12 border-x-2 border-pastelBlackOlive rounded-none px-24">
         <!-- <div>123</div> -->
         {#if gallery}
-          <SimpleLocationMap gallery={gallery} mapStyle="map-medium"/> 
+          <SimpleLocationMap {gallery} mapStyle="map-medium" />
         {:else}
-          <img src={image} class="mx-auto shadow-xl" alt="">
+          <img src={image} class="mx-auto shadow-xl" alt="" />
         {/if}
       </div>
       <div class="flex items-center col-span-1">
@@ -40,11 +44,11 @@ import DeleteButton from "../subComponent/Buttons/DeleteButton.svelte";
     </div>
     <div class="container flex w-1/3 space-x-4">
       {#if gallery}
-        <CheckInButton bind:countAllVisitors = {bottomComp[0].value} bind:countCurVisitors = {bottomComp[1].value}/>
+        <CheckInButton bind:countAllVisitors={bottomComp[0].value} bind:countCurVisitors={bottomComp[1].value} />
       {/if}
-      <DeleteButton/>
+      <DeleteButton />
       {#if gallery}
-        <CheckOutButton bind:countCurVisitors = {bottomComp[1].value}/>
+        <CheckOutButton bind:countCurVisitors={bottomComp[1].value} />
       {/if}
     </div>
     {#each bottomComp as attr}
@@ -58,6 +62,4 @@ import DeleteButton from "../subComponent/Buttons/DeleteButton.svelte";
       </div>
     {/each}
   </div>
-  
 </div>
-

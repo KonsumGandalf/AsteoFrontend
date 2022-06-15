@@ -1,17 +1,17 @@
 <script>
-  import {getContext, onMount} from "svelte";
+  import { getContext, onMount } from "svelte";
   import { push } from "svelte-spa-router";
 
   export let countCurVisitors;
   const asteoService = getContext("AsteoService");
-  
-  async function checkOut(){
+
+  async function checkOut() {
     countCurVisitors -= 1;
-    const res = (await asteoService.galleryCheckOut((window.location.href).split("/galleries/")[1]));
+    const res = await asteoService.galleryCheckOut(window.location.href.split("/galleries/")[1]);
     try {
-      if((res.status === 204 || res.status === 201 )) {
+      if (res.status === 204 || res.status === 201) {
       }
-    } catch(error) {
+    } catch (error) {
       const msg = res.response.data.message.toString();
       alert(msg);
     }

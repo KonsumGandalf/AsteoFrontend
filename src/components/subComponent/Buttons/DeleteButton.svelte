@@ -1,12 +1,12 @@
 <script>
-  import {getContext, onMount} from "svelte";
+  import { getContext, onMount } from "svelte";
   import { push } from "svelte-spa-router";
 
   const asteoService = getContext("AsteoService");
-  
-  async function deleteEle(){
-    const res = (await asteoService.deleteEle((window.location.href).split("/#/")[1]));
-    const subPage = (window.location.href).split("/")[4];
+
+  async function deleteEle() {
+    const res = await asteoService.deleteEle(window.location.href.split("/#/")[1]);
+    const subPage = window.location.href.split("/")[4];
     if (res.status) {
       push(`/${subPage}`);
     } else {

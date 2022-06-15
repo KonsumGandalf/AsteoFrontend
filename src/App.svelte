@@ -1,6 +1,7 @@
 <script>
-  import {setContext} from "svelte";
-//  import {DonationService} from "./services/donation-service";
+  import { setContext } from "svelte";
+  //  import {DonationService} from "./services/donation-service";
+  import Router from "svelte-spa-router";
   import Home from "./pages/Home.svelte";
   import Analytics from "./pages/Analytics.svelte";
   import Artists from "./pages/GalleryPages/Artists.svelte";
@@ -15,13 +16,12 @@
   import EpochsDetail from "./pages/DetailPages/EpochsDetail.svelte";
   import GalleriesDetail from "./pages/DetailPages/GalleriesDetail.svelte";
   import PaintingsDetail from "./pages/DetailPages/PaintingsDetail.svelte";
-
-  import Router from "svelte-spa-router";
+  
   import { AsteoService } from "./services/asteo-service";
 
   setContext("AsteoService", new AsteoService("http://localhost:4000"));
 
-  let routes = {
+  const routes = {
     "/": Home,
     "/login": Login,
     "/register": Register,
@@ -38,9 +38,9 @@
     "/epochs/:id": EpochsDetail,
     "/galleries/:id": GalleriesDetail,
     "/paintings/:id": PaintingsDetail,
-  }
+  };
 </script>
 
 <div>
-  <Router {routes}/>
+  <Router {routes} />
 </div>
