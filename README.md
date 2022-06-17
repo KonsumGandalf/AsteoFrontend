@@ -54,7 +54,12 @@
         <li><a href="#what-are-my-benefits-of-asteo">What are my benefits of Asteo?</a></li>
       </ul>
     </li>
-    <li><a href="#installation">Installation</a></li>
+    <li>
+      <a href="#installation">Installation</a>
+      <ul>
+        <li><a href="#usage">Usage</a></li>
+      </ul>
+    </li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
@@ -127,7 +132,7 @@ _Below is an example of how you can instruct your audience on installing and set
 
     1. Clone the repo
         ```sh
-        git clone https://github.com/KonsumGandalf/AsteoFrontend
+        git clone https://github.com/KonsumGandalf/AsteoBackend
         ```
     2. Install NPM packages
         ```sh
