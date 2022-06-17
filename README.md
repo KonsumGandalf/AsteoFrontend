@@ -19,7 +19,6 @@
 -->
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
@@ -29,7 +28,7 @@
 <br />
 <div align="center">
   <a href="https://asteo.netlify.app/">
-    <img src="public\design\images\icons\AsteoLogoWhite.png" alt="Logo" width="300" height="300">
+    <img src="public\design\images\icons\asteo-whiteblack.png" alt="Logo" width="300" height="300">
   </a>
 
 </div>
@@ -170,7 +169,7 @@ Template Login:
   
 #### YouTube Video
 <a href="https://www.youtube.com/playlist?list=PLQXLltJ_ijbIhzO_AFdyr_wtjpOm08xAq">
-    <img src="https://i.ytimg.com/vi/VkbmjF1PwCM/hqdefault.jpg?sqp=-oaymwEXCNACELwBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLBlTDNYqE64v8gm0RV6p3gcN299UQ" alt="Logo">
+    <img src="public\design\design-ideas\Asteo-presentation.png" alt="Logo">
 </a>
 
 <!-- LICENSE -->
