@@ -198,8 +198,8 @@ Project Link: [Asteo] (https://github.com/users/KonsumGandalf/projects/6)
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
-
+Sources that helped me to improve the Project
+  
 * [Eamonn de Leastar](https://github.com/edeleastar)
 * [ReadMe Template](https://github.com/othneildrew/Best-README-Template)
 * [Choose an Open Source License](https://choosealicense.com)
