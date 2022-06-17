@@ -169,7 +169,7 @@ Template Login:
   ```
   
 #### YouTube Video
-<a href="https://www.youtube.com/watch?v=VkbmjF1PwCM&list=PLQXLltJ_ijbIhzO_AFdyr_wtjpOm08xAq&index=2">
+<a href="https://www.youtube.com/playlist?list=PLQXLltJ_ijbIhzO_AFdyr_wtjpOm08xAq">
     <img src="https://i.ytimg.com/vi/VkbmjF1PwCM/hqdefault.jpg?sqp=-oaymwEXCNACELwBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLBlTDNYqE64v8gm0RV6p3gcN299UQ" alt="Logo">
 </a>
 
