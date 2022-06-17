@@ -75,7 +75,7 @@
 </a>
 
 This project is primarily used to showcase one's skills. It was created for the subject Fullstack Development at the OTH Regensburg and has no commercial background. 
-The teaching professor was <a href="public\design\screenshot.png">Eamonn de Leastar.
+The teaching professor was <a href="https://github.com/edeleastar">Eamonn de Leastar.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
