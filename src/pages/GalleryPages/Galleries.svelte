@@ -19,13 +19,13 @@
   onMount(async () => {
     galleryList = await asteoService.getAllGalleries();
     idList = galleryList.map((ele) => ele._id);
-    attrList = galleryList.map((ele) => [`Name: ${ele.name}`, `Average Rating: ${ele.countAllVisitors}`]);
+    attrList = galleryList.map((ele) => [`Name: ${ele.name}`, `Number of historic visitors: ${ele.countAllVisitors}`]);
   });
 
   async function updateGallery() {
     galleryList = await asteoService.getAllGalleries();
     idList = galleryList.map((ele) => ele._id);
-    attrList = galleryList.map((ele) => [`Name: ${ele.name}`, `Average Rating: ${ele.countAllVisitors}`]);
+    attrList = galleryList.map((ele) => [`Name: ${ele.name}`, `Number of historic visitors: ${ele.countAllVisitors}`]);
   }
 
   async function createGallery() {
