@@ -4,8 +4,8 @@
   export let classExtensionImg = "";
 </script>
 
-<div>
-  <img src={imgSource} class="w-11/12 shadow-xl {classExtensionImg}" alt="" />
+<div class=" mb-8">
+  <img src={imgSource} class="shadow-xl max-h-1/2 {classExtensionImg} rounded-md" alt="" />
   <!-- <div class="font-mono tracking-wide text-sm text-left">{imgCaption}</div> -->
   <div class="mt-4">
     {#each imgCaption as line}

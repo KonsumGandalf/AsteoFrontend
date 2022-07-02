@@ -17,8 +17,12 @@
   height: 600px;
 }
 
-.map-large{
+.map-large-lg{
   width: 62.5rem;
+  height: 43.75rem;
+}
+.map-large-md{
+  width: 50rem;
   height: 43.75rem;
 }
 

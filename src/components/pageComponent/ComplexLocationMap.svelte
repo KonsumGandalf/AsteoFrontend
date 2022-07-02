@@ -1,5 +1,4 @@
 <script>
-  import "/dist/leaflet.css";
   import "leaflet/dist/leaflet.css";
   import { getContext, onMount } from "svelte";
   import { LeafletMap } from "../../services/leaflet-map";
@@ -106,6 +105,6 @@
         </form>
       {/if}
     </div>
-    <div class="map-large" id={mapName} />
+    <div class="map-large-md lg:map-large-lg" id={mapName} />
   </div>
 </div>

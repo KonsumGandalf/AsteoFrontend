@@ -19,7 +19,6 @@
 -->
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
@@ -28,8 +27,8 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="">
-    <img src="public\design\images\icons\AsteoLogoWhite.png" alt="Logo" width="300" height="300">
+  <a href="https://asteo.netlify.app/">
+    <img src="public\design\images\icons\asteo-whiteblack.png" alt="Logo" width="300" height="300">
   </a>
 
 </div>
@@ -54,7 +53,12 @@
         <li><a href="#what-are-my-benefits-of-asteo">What are my benefits of Asteo?</a></li>
       </ul>
     </li>
-    <li><a href="#installation">Installation</a></li>
+    <li>
+      <a href="#installation">Installation</a>
+      <ul>
+        <li><a href="#usage">Usage</a></li>
+      </ul>
+    </li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
@@ -66,7 +70,9 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+<a href="https://asteo.netlify.app/">
+    <img src="public\design\images\icons\Preview.png" alt="Logo">
+</a>
 
 This project is primarily used to showcase one's skills. It was created for the subject Fullstack Development at the OTH Regensburg and has no commercial background. 
 The teaching professor was <a href="https://github.com/edeleastar">Eamonn de Leastar.
@@ -125,7 +131,7 @@ _Below is an example of how you can instruct your audience on installing and set
 
     1. Clone the repo
         ```sh
-        git clone https://github.com/KonsumGandalf/AsteoFrontend
+        git clone https://github.com/KonsumGandalf/AsteoBackend
         ```
     2. Install NPM packages
         ```sh
@@ -153,7 +159,18 @@ _Below is an example of how you can instruct your audience on installing and set
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
+### Usage
 
+Template Login:
+  ```sh
+    Username: HanSolo
+    Password: secret
+  ```
+  
+#### YouTube Video
+<a href="https://www.youtube.com/playlist?list=PLQXLltJ_ijbIhzO_AFdyr_wtjpOm08xAq">
+    <img src="public\design\design-ideas\Asteo-presentation.png" alt="Logo">
+</a>
 
 <!-- LICENSE -->
 ## License
@@ -180,8 +197,8 @@ Project Link: [Asteo] (https://github.com/users/KonsumGandalf/projects/6)
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
-
+Sources that helped me to improve the Project
+  
 * [Eamonn de Leastar](https://github.com/edeleastar)
 * [ReadMe Template](https://github.com/othneildrew/Best-README-Template)
 * [Choose an Open Source License](https://choosealicense.com)
@@ -196,10 +213,10 @@ Use this space to list resources you find helpful and would like to give credit 
 [forks-url]:https://github.com/KonsumGandalf/AsteoFrontend
 [stars-shield]: https://img.shields.io/github/stars/KonsumGandalf/AsteoFrontend?style=for-the-badge
 [stars-url]: https://github.com/KonsumGandalf/AsteoFrontend
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
-[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
+[issues-shield]: https://img.shields.io/github/issues/KonsumGandalf/AsteoFrontend?style=for-the-badge
+[issues-url]: https://github.com/KonsumGandalf/AsteoFrontend/issues
 [license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
 [license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/david-schmidt-09b69b1b6/
-[product-screenshot]: public\design\screenshot.png
+[product-screenshot]: public\design\images\icons\Preview.png

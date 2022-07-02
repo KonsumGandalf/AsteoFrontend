@@ -14,12 +14,12 @@
 <div class="h-1/3 bg-pastelPeriwinkleCrayola items-center">
   <div class="mx-32 p-8">
     {#if imgPerLine === 4}
-      <div class="grid grid-cols-4 my-8">
+      <div class="columns-4 gap-3 mx-auto space-y-3 pb-28">
         {#each input as image, idx}
-          <div class="border-l-2 border-pastelBlackOlive p-4 m-4 rounded-none">
+          <div class="border-l-0 border-pastelBlackOlive p-4 rounded-none break-inside-avoid shadow-2xl rounded-lg mb-8">
             <a href="{window.location.href}/{refList[idx]}">
               {#if mode === "image"}
-                <ImageCaption imgSource={imgList[idx]} imgCaption={image} classExtensionImg="h-72 " />
+                <ImageCaption imgSource={imgList[idx]} imgCaption={image} classExtensionImg="" />
               {:else if mode === "map" && galleryList[idx].lng}
                 <MapCaption gallery={galleryList[idx]} imgCaption={image} classExtensionImg="w-72 h-72" />
               {/if}
@@ -28,12 +28,12 @@
         {/each}
       </div>
     {:else}
-      <div class="grid grid-cols-3 my-8">
+      <div class="columns-3 gap-3 mx-auto space-y-3 pb-20 ">
         {#each input as image, idx}
-          <div class="border-l-2 border-pastelBlackOlive p-4 m-4 rounded-none">
+          <div class="border-l-0 border-pastelBlackOlive p-4 rounded-none break-inside-avoid-column shadow-2xl rounded-lg ">
             <a href="{window.location.href}/{refList[idx]}">
               {#if mode === "image"}
-                <ImageCaption imgSource={imgList[idx]} imgCaption={image} classExtensionImg="h-72 " />
+                <ImageCaption imgSource={imgList[idx]} imgCaption={image} classExtensionImg="" />
               {:else if mode === "map" && galleryList[idx].lng}
                 <MapCaption gallery={galleryList[idx]} imgCaption={image} classExtensionImg="w-72 h-72" />
               {/if}
