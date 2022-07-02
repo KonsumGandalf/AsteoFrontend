@@ -1,5 +1,4 @@
 <script>
-  import "/dist/leaflet.css";
   import "leaflet/dist/leaflet.css";
   import * as L from "leaflet";
   import { getContext, onMount } from "svelte";

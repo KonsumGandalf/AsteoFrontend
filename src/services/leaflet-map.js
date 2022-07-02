@@ -1,4 +1,5 @@
 import * as L from "leaflet";
+import markerIconPng from "leaflet/dist/images/marker-icon.png";
 
 export class LeafletMap {
   imap;
@@ -68,7 +69,12 @@ export class LeafletMap {
 
   addMarker(location, popupText = "", layerTitle = "default") {
     let group = {};
-    const marker = L.marker([location.lat, location.lng]);
+    const icon = L.icon({
+      iconUrl: markerIconPng,
+      iconSize: [25, 41],
+      iconAnchor: [12, 41],
+    })
+    const marker = L.marker([location.lat, location.lng], {icon: icon});
     if (popupText) {
       const popup = L.popup({ autoClose: false, closeOnClick: false });
       popup.setContent(popupText);

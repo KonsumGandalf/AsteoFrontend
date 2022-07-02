@@ -574,10 +574,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin: 0px;
 }
 
-.m-4{
-  margin: 1rem;
-}
-
 .my-auto{
   margin-top: auto;
   margin-bottom: auto;
@@ -964,6 +960,26 @@ Ensure the default browser behavior of the `hidden` attribute.
           appearance: none;
 }
 
+.columns-4{
+  -moz-columns: 4;
+       columns: 4;
+}
+
+.columns-3{
+  -moz-columns: 3;
+       columns: 3;
+}
+
+.break-inside-avoid{
+  -moz-column-break-inside: avoid;
+       break-inside: avoid;
+}
+
+.break-inside-avoid-column{
+  -moz-column-break-inside: avoid;
+       break-inside: avoid-column;
+}
+
 .grid-flow-row{
   grid-auto-flow: row;
 }
@@ -982,10 +998,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .grid-cols-12{
   grid-template-columns: repeat(12, minmax(0, 1fr));
-}
-
-.grid-cols-4{
-  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .flex-row{
@@ -1046,6 +1058,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .gap-2{
   gap: 0.5rem;
+}
+
+.gap-3{
+  gap: 0.75rem;
 }
 
 .space-x-1 > :not([hidden]) ~ :not([hidden]){
@@ -1251,6 +1267,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .border-l-2{
   border-left-width: 2px;
+}
+
+.border-l-0{
+  border-left-width: 0px;
 }
 
 .border-solid{
@@ -1525,6 +1545,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .pt-8{
   padding-top: 2rem;
+}
+
+.pb-28{
+  padding-bottom: 7rem;
+}
+
+.pb-20{
+  padding-bottom: 5rem;
 }
 
 .pb-2{
@@ -1845,8 +1873,13 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 600px;
 }
 
-.map-large{
+.map-large-lg{
   width: 62.5rem;
+  height: 43.75rem;
+}
+
+.map-large-md{
+  width: 50rem;
   height: 43.75rem;
 }
 
